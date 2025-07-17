@@ -1,0 +1,30 @@
+my-video-app/
+├── api/                   # Vercel Serverless Functions
+│   ├── auth.js            # ตรวจสอบ Login
+│   ├── videos.js          # ดึง/เพิ่ม/ลบวิดีโอ
+│   └── upload.js          # อัพโหลดไฟล์ (Cloudinary)
+├── public/
+│   ├── admin/
+│   │   ├── login.html     # หน้า Login Admin
+│   │   ├── dashboard.html # หน้าจัดการวิดีโอ
+│   │   └── upload.html    # อัพโหลด/เพิ่มลิงก์
+│   ├── css/
+│   │   ├── style.css      # สไตล์ทั่วไป
+│   │   ├── admin.css      # สไตล์ Admin (สีดำ โมเดิร์น)
+│   │   └── player.css     # สไตล์ Video Player
+│   ├── js/
+│   │   ├── admin.js       # Logic Admin
+│   │   ├── auth.js        # ระบบ Login
+│   │   ├── player.js      # ควบคุมวิดีโอ
+│   │   └── upload.js      # จัดการอัพโหลด
+│   ├── images/            # เก็บรูปภาพ
+│   └── index.html         # หน้าหลักแสดงวิดีโอ
+├── lib/
+│   ├── cloudinary.js      # Cloudinary Config
+│   └── db.js             # JSON Database Helper
+├── data/
+│   └── videos.json        # เก็บข้อมูลวิดีโอ
+├── .env                   # Environment Variables
+├── package.json           # ข้อมูลโปรเจกต์
+├── package-lock.json      # ล็อก dependencies
+└── vercel.json            # คอนฟิก Vercel

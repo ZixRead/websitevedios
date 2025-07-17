@@ -1,0 +1,20 @@
+{
+  "name": "my-video-app",
+  "version": "1.0.0",
+  "description": "A simple video streaming and management application for Vercel.",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.41.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

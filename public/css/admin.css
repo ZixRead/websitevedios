@@ -1,0 +1,169 @@
+/* public/css/admin.css */
+
+/* Admin specific styles - modern dark theme */
+
+.admin-container {
+    background-color: #1a202c; /* Dark background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.admin-card {
+    background-color: #2d3748; /* Slightly lighter card background */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    color: #e2e8f0; /* Light text */
+}
+
+.admin-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #4a5568; /* Darker border */
+    border-radius: 0.5rem;
+    background-color: #2d3748; /* Input background */
+    color: #e2e8f0; /* Input text */
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.admin-input:focus {
+    border-color: #63b3ed; /* Blue border on focus */
+}
+
+.admin-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #63b3ed; /* Blue button */
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.admin-button:hover {
+    background-color: #4299e1; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.admin-button:active {
+    transform: translateY(0);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #2d3748;
+    border-radius: 0.75rem;
+    overflow: hidden; /* For rounded corners on table */
+}
+
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #4a5568; /* Darker border */
+}
+
+.admin-table th {
+    background-color: #1a202c; /* Even darker header */
+    font-weight: 600;
+    color: #a0aec0; /* Lighter grey for headers */
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #4a5568; /* Hover effect for rows */
+}
+
+.delete-button {
+    background-color: #ef4444; /* Red for delete */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}
+
+.message-box {
+    background-color: #38a169; /* Green for success */
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.message-box.error {
+    background-color: #e53e3e; /* Red for error */
+}
+
+.message-box.show {
+    opacity: 1;
+}
+
+/* File Upload specific styles */
+.upload-form-group {
+    margin-bottom: 1rem;
+}
+
+.upload-file-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #4a5568;
+    border-radius: 0.5rem;
+    background-color: #2d3748;
+    color: #e2e8f0;
+    cursor: pointer;
+}
+
+.upload-file-input::-webkit-file-upload-button {
+    background-color: #63b3ed;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.upload-file-input::-webkit-file-upload-button:hover {
+    background-color: #4299e1;
+}
+
+.upload-progress-bar-container {
+    width: 100%;
+    background-color: #4a5568;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    height: 10px;
+}
+
+.upload-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #38a169; /* Green progress */
+    border-radius: 0.5rem;
+    transition: width 0.3s ease-in-out;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video - My Video App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-container">
+    <div class="admin-card">
+        <h2 class="text-3xl font-bold text-center text-white mb-6">อัปโหลด/เพิ่มลิงก์วิดีโอ</h2>
+        <div id="messageBox" class="message-box"></div>
+        <form id="uploadForm">
+            <div class="mb-4 upload-form-group">
+                <label for="uploadVideoTitle" class="block text-gray-300 text-sm font-bold mb-2">ชื่อวิดีโอ:</label>
+                <input type="text" id="uploadVideoTitle" name="title" class="admin-input" placeholder="ชื่อวิดีโอ" required>
+            </div>
+            <div class="mb-4 upload-form-group">
+                <label for="uploadVideoDescription" class="block text-gray-300 text-sm font-bold mb-2">คำอธิบาย:</label>
+                <textarea id="uploadVideoDescription" name="description" class="admin-input h-24" placeholder="คำอธิบายวิดีโอ"></textarea>
+            </div>
+
+            <div class="mb-4 upload-form-group">
+                <label for="fileInput" class="block text-gray-300 text-sm font-bold mb-2">อัปโหลดไฟล์วิดีโอ/รูปภาพ:</label>
+                <input type="file" id="fileInput" name="file" accept="video/*,image/*" class="upload-file-input">
+                <p class="text-gray-500 text-xs mt-1">รองรับไฟล์วิดีโอ (mp4, mov) และรูปภาพ (jpg, png)</p>
+            </div>
+
+            <div class="upload-progress-bar-container mb-4">
+                <div id="uploadProgressBar" class="upload-progress-bar"></div>
+            </div>
+            <p id="uploadProgressText" class="text-center text-gray-400 text-sm mb-4">0%</p>
+
+            <div class="text-center text-gray-400 my-4">หรือ</div>
+
+            <div class="mb-4 upload-form-group">
+                <label for="videoUrl" class="block text-gray-300 text-sm font-bold mb-2">URL วิดีโอ (ถ้าไม่มีการอัปโหลดไฟล์):</label>
+                <input type="url" id="videoUrl" name="url" class="admin-input" placeholder="เช่น https://example.com/my-video.mp4">
+            </div>
+            <div class="mb-6 upload-form-group">
+                <label for="videoThumbnailUrl" class="block text-gray-300 text-sm font-bold mb-2">URL รูปภาพปก (Thumbnail) (ถ้ามี):</label>
+                <input type="url" id="videoThumbnailUrl" name="thumbnailUrl" class="admin-input" placeholder="เช่น https://example.com/my-thumbnail.jpg">
+            </div>
+
+            <button type="submit" class="admin-button">อัปโหลด/เพิ่มวิดีโอ</button>
+        </form>
+        <p class="text-center text-gray-400 text-sm mt-4">
+            <a href="/admin/dashboard.html" class="text-blue-400 hover:underline">กลับสู่ Dashboard</a>
+        </p>
+    </div>
+
+    <!-- Custom JavaScript for upload logic -->
+    <script src="/js/upload.js"></script>
+</body>
+</html>
